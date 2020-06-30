@@ -1,26 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Scoreboard from './Components/scoreboard/scoreboard.component';
+import {ChoiceList} from './Components/choice-list/choice-list.component';
+import {Header} from './Components/header/header.component';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div className="App">
+			<Header />
+			<Scoreboard />
+			<ChoiceList />
+		</div>
+	);
 }
 
 export default App;

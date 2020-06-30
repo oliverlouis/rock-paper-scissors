@@ -1,0 +1,23 @@
+.score-board {
+	margin: 25px auto 30px;
+	width: 50vw;
+	height: 150px;
+	padding: 30px 50px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	background-color: #e5e5e5;
+	border-radius: 20px;
+
+	.score-header {
+		font-family: 'Rubik', sans-serif;
+		font-size: 25px;
+		color: #303960;
+		height: 68px;
+	}
+
+	.score-count {
+		display: flex;
+		justify-content: center;
+	}
+}
