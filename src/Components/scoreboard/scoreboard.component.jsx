@@ -8,6 +8,7 @@ class Scoreboard extends React.Component {
 		this.state = {
 			playerScore: 0,
 			computerScore: 0,
+			round: 3,
 		};
 	}
 
@@ -19,6 +20,11 @@ class Scoreboard extends React.Component {
 					<div className="score-count">
 						<h1>{this.state.playerScore}</h1>
 					</div>
+				</div>
+				<div className="round">
+					Best of
+					<br />
+					<span>{this.state.round}</span>
 				</div>
 				<div className="computer-score score-header">
 					<h3>Computer Score</h3>
