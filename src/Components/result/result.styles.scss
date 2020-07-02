@@ -1,0 +1,18 @@
+.result {
+	display: flex;
+	justify-content: center;
+	width: 300px;
+	position: absolute;
+	z-index: 5;
+	// display: none;
+	left: 43.4%;
+	top: 54.8%;
+
+	.container {
+		width: 300px;
+		height: 200px;
+		display: flex;
+		flex-direction: column;
+		justify-items: space-between;
+	}
+}

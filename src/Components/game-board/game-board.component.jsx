@@ -1,6 +1,7 @@
 import React from 'react';
 import Scoreboard from '../scoreboard/scoreboard.component';
 import {ChoiceList} from '../choice-list/choice-list.component';
+import {Result} from '../result/result.component';
 import './game-board.styles.scss';
 
 class Gameboard extends React.Component {
@@ -10,15 +11,19 @@ class Gameboard extends React.Component {
 		this.state = {
 			playerScore: 0,
 			computerScore: 0,
-			bestOf: 3,
+			winner: '',
+			computerChoice: '',
+			bestOf: 5,
 		};
 	}
 
 	play = (event) => {
 		let playerChoice = event.target.id;
 		let computerChoice = this.getComputerChoice();
+		this.setState({computerChoice: computerChoice});
 		console.log(playerChoice, computerChoice);
 		let winner = this.getWinner(playerChoice, computerChoice);
+		this.setState({winner: winner});
 		console.log(winner);
 		if (winner === 'player') {
 			this.setState((prevState) => {
@@ -66,6 +71,7 @@ class Gameboard extends React.Component {
 			<div className="game-board">
 				<Scoreboard playerScore={this.state.playerScore} computerScore={this.state.computerScore} bestOf={this.state.bestOf} />
 				<ChoiceList play={this.play} />
+				<Result winner={this.state.winner} computerChoice={this.state.computerChoice} />
 			</div>
 		);
 	}
