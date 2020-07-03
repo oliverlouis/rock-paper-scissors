@@ -8,4 +8,15 @@
 	justify-content: space-around;
 	align-items: center;
 	padding: 0 20px;
+
+	.choice-container {
+		width: 50vw;
+		height: 380px;
+		background-color: #e5e5e5;
+		border-radius: 20px;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		padding: 0 20px;
+	}
 }

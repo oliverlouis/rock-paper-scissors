@@ -13,7 +13,7 @@ class Gameboard extends React.Component {
 			computerScore: 0,
 			winner: '',
 			computerChoice: '',
-			bestOf: 5,
+			bestOf: 9,
 		};
 	}
 
@@ -66,12 +66,20 @@ class Gameboard extends React.Component {
 		}
 	};
 
+	reset = () => {
+		if (this.state.winner) {
+			this.setState({
+				winner: '',
+			});
+		}
+	};
+
 	render() {
 		return (
 			<div className="game-board">
 				<Scoreboard playerScore={this.state.playerScore} computerScore={this.state.computerScore} bestOf={this.state.bestOf} />
-				<ChoiceList play={this.play} />
-				<Result winner={this.state.winner} computerChoice={this.state.computerChoice} />
+				<ChoiceList play={this.play} winner={this.state.winner} reset={this.reset} />
+				{this.state.winner ? <Result winner={this.state.winner} computerChoice={this.state.computerChoice} /> : null}
 			</div>
 		);
 	}

@@ -5,14 +5,26 @@
 	position: absolute;
 	z-index: 5;
 	// display: none;
-	left: 43.4%;
-	top: 54.8%;
+	left: 39.9%;
+	top: 50.8%;
 
 	.container {
-		width: 300px;
-		height: 200px;
+		width: 200px;
+		height: 350px;
 		display: flex;
 		flex-direction: column;
-		justify-items: space-between;
+		align-content: space-between;
+		text-align: center;
+	}
+
+	.result__element {
+		margin-bottom: 15px;
+		margin-top: 15px;
+	}
+
+	.result__display {
+		font-family: 'Rubik', sans-serif;
+		font-weight: 700;
+		font-size: 90px;
 	}
 }

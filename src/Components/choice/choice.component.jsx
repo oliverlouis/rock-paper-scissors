@@ -7,7 +7,7 @@ export const Choice = ({icon, border, id, play}) => {
 	if (id === 'rock') {
 	}
 	return (
-		<div className="choice" style={{border: border}} id={id} onClick={play}>
+		<div className="choice icon" style={{border: border}} id={id} onClick={play}>
 			<div>
 				<i className={icon} id={id}></i>
 			</div>
